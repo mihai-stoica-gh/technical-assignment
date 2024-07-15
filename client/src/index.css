@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+    height: 100%;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    position: relative;
+    background: #080808;
+    color: #ccc;
+    height: 100%;
+}
+body:before {
+    display: block;
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-image: url('../public/noise-2.png');
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* Scrollbars - Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.25) transparent;
+}
+/* Scrollbars - Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.50);
+}
