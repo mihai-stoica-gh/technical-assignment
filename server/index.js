@@ -222,7 +222,7 @@ app.post('/v1/token', (req, res) => {
                     username: user.username,
                 }, 
                 process.env.ACCESS_TOKEN_SECRET,
-                { expiresIn: "15m"}
+                { expiresIn: "30m"}
             );
             const refreshToken = jwt.sign(
                 {
@@ -230,7 +230,8 @@ app.post('/v1/token', (req, res) => {
                     name: user.name,
                     username: user.username,
                 }, 
-                process.env.REFRESH_TOKEN_SECRET
+                process.env.REFRESH_TOKEN_SECRET,
+                { expiresIn: "30d"}
             );
             return res
                 .status(200)
