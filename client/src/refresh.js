@@ -1,7 +1,7 @@
 import createRefresh from 'react-auth-kit/createRefresh';
 
 const refresh = createRefresh({
-    interval: 10*60,
+    interval: 29*60,
     refreshApiCallback: async ({
         authToken,
         refreshToken,
@@ -26,7 +26,7 @@ const refresh = createRefresh({
             return {
                 isSuccess: true,
                 newAuthToken: data.accessToken,
-                newAuthTokenExpireIn: 15*60,
+                newAuthTokenExpireIn: 30*60,
                 newRefreshToken: data.refreshToken,
                 newRefreshTokenExpiresIn: 30*24*60*60
             }
